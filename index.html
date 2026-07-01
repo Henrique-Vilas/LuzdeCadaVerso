@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>30 Dias para se Reconectar com Deus — Devocional</title>
+<meta name="description" content="Um reencontro de 30 dias com Deus, sem peso e sem pressa. Cinco minutos por dia para voltar a sentir Sua presença — começando hoje." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="30 Dias para se Reconectar com Deus" />
+<meta property="og:description" content="Um reencontro de 30 dias, sem peso e sem pressa. Cinco minutos por dia para voltar a sentir a presença de Deus." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --cream:#F6EFE2;
+    --cream-2:#FBF6EC;
+    --ink:#2B261E;
+    --ink-soft:#5b5346;
+    --sage:#5F6B4E;
+    --sage-dark:#4a5440;
+    --gold:#B6822A;
+    --gold-soft:#cfa24f;
+    --line:rgba(43,38,30,.12);
+    --shadow:0 14px 40px -18px rgba(43,38,30,.35);
+    --shadow-soft:0 8px 24px -14px rgba(43,38,30,.30);
+    --radius:22px;
+    --radius-sm:14px;
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    padding-bottom:84px; /* espaço p/ CTA sticky no mobile */
+  }
+  @media(min-width:760px){ body{ padding-bottom:0; } }
+
+  h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.18;color:var(--ink);letter-spacing:-.01em}
+  .verse{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .section{padding:64px 0}
+  @media(min-width:760px){ .section{padding:92px 0} }
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--sage);
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block}
+
+  .gold{color:var(--gold);font-style:normal}
+  .center{text-align:center}
+  .muted{color:var(--ink-soft)}
+
+  /* ---------- Botões ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--sage);color:var(--cream-2);
+    font-family:'Inter',sans-serif;font-weight:600;font-size:17px;
+    text-decoration:none;
+    padding:17px 30px;border-radius:50px;
+    box-shadow:var(--shadow);
+    transition:transform .18s ease, background .2s ease, box-shadow .2s ease;
+    border:none;cursor:pointer;
+  }
+  .btn:hover{background:var(--sage-dark);transform:translateY(-2px);box-shadow:0 18px 44px -16px rgba(43,38,30,.45)}
+  .btn:active{transform:translateY(0)}
+  .btn--lg{font-size:18.5px;padding:20px 38px}
+  .btn--block{width:100%}
+  .btn .arrow{transition:transform .2s ease}
+  .btn:hover .arrow{transform:translateX(4px)}
+
+  .micro{font-size:13.5px;color:var(--ink-soft);margin-top:12px;line-height:1.5}
+  .micro b{color:var(--ink);font-weight:600}
+
+  /* ---------- Sol nascente (elemento gráfico) ---------- */
+  .sun{position:relative;display:inline-block}
+  .sun-svg{display:block}
+  .bg-sun{
+    position:absolute;pointer-events:none;opacity:.55;z-index:0;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 80% at 50% -10%, #FCF7EC 0%, var(--cream) 55%);
+    padding-top:46px;padding-bottom:54px;
+  }
+  .hero-sun{
+    position:absolute;top:-120px;left:50%;transform:translateX(-50%);
+    width:560px;max-width:130%;opacity:.5;z-index:0;
+  }
+  .hero-inner{position:relative;z-index:1;text-align:center}
+  .hero h1{
+    font-size:clamp(30px,7.4vw,52px);
+    margin:20px auto 0;max-width:14ch;
+  }
+  .hero .sub{
+    font-size:clamp(16px,4.4vw,19px);
+    color:var(--ink-soft);max-width:34ch;margin:18px auto 0;
+  }
+  .hero-cta{margin-top:30px}
+
+  /* Mockup capa */
+  .cover{
+    margin:36px auto 6px;
+    width:min(260px,66vw);
+    aspect-ratio:3/4.2;
+    border-radius:10px;
+    background:linear-gradient(160deg,#FBF6EC 0%,#F3E9D6 100%);
+    box-shadow:0 30px 60px -22px rgba(43,38,30,.5), 0 2px 0 rgba(255,255,255,.6) inset;
+    border:1px solid rgba(182,130,42,.25);
+    position:relative;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:28px 22px;text-align:center;
+    transform:rotate(-2deg);
+    transition:transform .4s ease;
+  }
+  .cover:hover{transform:rotate(0deg)}
+  .cover .c-eyebrow{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:14px}
+  .cover .c-num{font-family:'Playfair Display',serif;font-size:46px;line-height:1;color:var(--gold);font-weight:700}
+  .cover .c-title{font-family:'Playfair Display',serif;font-size:19px;margin-top:6px;color:var(--ink);font-weight:600}
+  .cover .c-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--ink-soft);margin-top:10px}
+  .cover .c-foot{position:absolute;bottom:16px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+
+  /* ---------- Espelho da dor ---------- */
+  .mirror{background:var(--cream-2)}
+  .pain-grid{
+    display:grid;grid-template-columns:1fr;gap:14px;margin-top:34px;
+  }
+  @media(min-width:680px){ .pain-grid{grid-template-columns:1fr 1fr} }
+  .pain{
+    display:flex;gap:14px;align-items:flex-start;
+    background:var(--cream);border:1px solid var(--line);
+    border-radius:var(--radius-sm);padding:18px 20px;
+    box-shadow:var(--shadow-soft);
+  }
+  .pain .ic{flex:0 0 auto;width:34px;height:34px;color:var(--sage);margin-top:1px}
+  .pain p{font-size:16px;color:var(--ink);line-height:1.5}
+
+  /* ---------- A virada ---------- */
+  .turn{position:relative;text-align:center;overflow:hidden}
+  .turn .quotebox{
+    max-width:40ch;margin:30px auto 0;
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:clamp(20px,5vw,25px);line-height:1.5;color:var(--ink);
+  }
+  .turn .quotebox b{font-style:normal;font-weight:600;color:var(--gold)}
+
+  /* ---------- Solução ---------- */
+  .solucao .highlight{
+    margin-top:24px;display:inline-block;
+    background:rgba(95,107,78,.08);
+    border:1px solid rgba(95,107,78,.22);
+    color:var(--sage-dark);
+    border-radius:50px;padding:12px 22px;
+    font-weight:600;font-size:15.5px;
+  }
+
+  /* ---------- Como funciona (4 cards) ---------- */
+  .steps{display:grid;grid-template-columns:1fr;gap:16px;margin-top:38px}
+  @media(min-width:680px){ .steps{grid-template-columns:1fr 1fr} }
+  @media(min-width:1000px){ .steps{grid-template-columns:repeat(4,1fr)} }
+  .step{
+    background:var(--cream-2);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 22px;
+    box-shadow:var(--shadow-soft);position:relative;
+  }
+  .step .n{font-family:'Playfair Display',serif;font-size:15px;color:var(--gold);font-weight:600;letter-spacing:.04em}
+  .step h3{font-size:21px;margin:10px 0 8px}
+  .step p{font-size:15px;color:var(--ink-soft);line-height:1.55}
+  .step .ic{width:30px;height:30px;color:var(--sage);margin-bottom:6px}
+
+  /* ---------- Jornada (4 semanas, escada) ---------- */
+  .journey{background:linear-gradient(180deg,var(--cream) 0%,#FCF7EC 100%)}
+  .ladder{margin-top:40px;display:grid;gap:16px}
+  .week{
+    display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;
+    background:var(--cream-2);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px 24px;
+    box-shadow:var(--shadow-soft);
+    position:relative;
+  }
+  @media(min-width:760px){
+    .week:nth-child(1){margin-right:18%}
+    .week:nth-child(2){margin-right:12%;margin-left:6%}
+    .week:nth-child(3){margin-right:6%;margin-left:12%}
+    .week:nth-child(4){margin-left:18%}
+  }
+  .week .badge{
+    width:54px;height:54px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 50% 60%, #F6E3B8, #EBD08C);
+    color:var(--ink);font-family:'Playfair Display',serif;font-weight:700;font-size:18px;
+    border:1px solid rgba(182,130,42,.4);flex:0 0 auto;
+  }
+  .week h3{font-size:19px;margin-bottom:3px}
+  .week p{font-size:14.5px;color:var(--ink-soft)}
+  .week .wlabel{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);font-weight:600}
+
+  /* ---------- Antes / Depois ---------- */
+  .ba-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:38px}
+  @media(min-width:720px){ .ba-grid{grid-template-columns:1fr 1fr;gap:0} }
+  .ba{
+    border:1px solid var(--line);padding:30px 26px;
+    background:var(--cream-2);box-shadow:var(--shadow-soft);
+  }
+  .ba.before{border-radius:var(--radius)}
+  .ba.after{border-radius:var(--radius);background:linear-gradient(180deg,#FCF7EC,#F4EAD4);border-color:rgba(182,130,42,.3)}
+  @media(min-width:720px){
+    .ba.before{border-radius:var(--radius) 0 0 var(--radius);border-right:none}
+    .ba.after{border-radius:0 var(--radius) var(--radius) 0}
+  }
+  .ba .tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+  .ba.before .tag{color:var(--ink-soft)}
+  .ba.after .tag{color:var(--gold)}
+  .ba h3{font-size:22px;margin-bottom:16px}
+  .ba ul{list-style:none;display:grid;gap:11px}
+  .ba li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:var(--ink)}
+  .ba li .dot{flex:0 0 auto;width:20px;height:20px;margin-top:2px}
+  .ba.before li{color:var(--ink-soft)}
+
+  /* ---------- Para quem é ---------- */
+  .fits-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:36px}
+  @media(min-width:720px){ .fits-grid{grid-template-columns:1fr 1fr} }
+  .fits{
+    background:var(--cream-2);border:1px solid var(--line);
+    border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow-soft);
+  }
+  .fits h3{font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .fits ul{list-style:none;display:grid;gap:12px}
+  .fits li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px}
+  .fits li svg{flex:0 0 auto;width:21px;height:21px;margin-top:2px}
+  .fits.yes li svg{color:var(--sage)}
+  .fits.no li svg{color:#b08a8a}
+  .fits.no li{color:var(--ink-soft)}
+
+  /* ---------- Depoimentos ---------- */
+  .testi-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:38px}
+  @media(min-width:760px){ .testi-grid{grid-template-columns:repeat(3,1fr)} }
+  .testi{
+    background:var(--cream-2);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow-soft);
+    display:flex;flex-direction:column;
+  }
+  .testi .stars{color:var(--gold);font-size:15px;letter-spacing:2px;margin-bottom:12px}
+  .testi .quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18.5px;line-height:1.5;color:var(--ink);flex:1}
+  .testi .who{display:flex;align-items:center;gap:12px;margin-top:18px}
+  .testi .avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#E7DAC2,#D8C49C);border:1px solid rgba(182,130,42,.3);flex:0 0 auto}
+  .testi .who b{font-size:14.5px;display:block}
+  .testi .who span{font-size:13px;color:var(--ink-soft)}
+
+  /* ---------- Oferta ---------- */
+  .offer{background:linear-gradient(180deg,#FCF7EC,var(--cream))}
+  .offer-card{
+    max-width:600px;margin:38px auto 0;
+    background:var(--cream-2);
+    border:1px solid rgba(182,130,42,.35);
+    border-radius:28px;
+    box-shadow:0 30px 70px -28px rgba(43,38,30,.5);
+    padding:38px 30px;text-align:center;position:relative;overflow:hidden;
+  }
+  .offer-card .ribbon{
+    display:inline-block;background:var(--sage);color:var(--cream-2);
+    font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    padding:7px 16px;border-radius:50px;margin-bottom:18px;
+  }
+  .includes{list-style:none;display:grid;gap:11px;text-align:left;max-width:380px;margin:6px auto 24px}
+  .includes li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px}
+  .includes li svg{flex:0 0 auto;width:21px;height:21px;color:var(--sage);margin-top:2px}
+  .price-old{font-size:18px;color:var(--ink-soft);text-decoration:line-through;text-decoration-color:rgba(43,38,30,.45)}
+  .price-now{font-family:'Playfair Display',serif;font-size:clamp(40px,11vw,58px);font-weight:700;color:var(--ink);line-height:1;margin:6px 0 4px}
+  .price-now small{font-size:.4em;font-weight:600;color:var(--ink-soft);vertical-align:super}
+  .coffee{font-size:14.5px;color:var(--gold);font-style:italic;font-family:'Cormorant Garamond',serif;font-weight:500;margin-bottom:24px}
+  .seals{display:flex;flex-wrap:wrap;gap:14px 22px;justify-content:center;margin-top:20px}
+  .seal{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-soft)}
+  .seal svg{width:17px;height:17px;color:var(--sage)}
+
+  /* ---------- Garantia ---------- */
+  .guarantee-card{
+    max-width:680px;margin:0 auto;
+    display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;
+    background:var(--cream-2);border:1px solid rgba(182,130,42,.3);
+    border-radius:var(--radius);padding:30px 30px;box-shadow:var(--shadow-soft);
+  }
+  @media(max-width:560px){ .guarantee-card{grid-template-columns:1fr;text-align:center;justify-items:center} }
+  .guarantee-seal{
+    width:96px;height:96px;flex:0 0 auto;
+    border-radius:50%;
+    border:2px dashed var(--gold);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:var(--gold);text-align:center;
+  }
+  .guarantee-seal .num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;line-height:1}
+  .guarantee-seal .lab{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-top:2px}
+  .guarantee-card h3{font-size:21px;margin-bottom:8px}
+  .guarantee-card p{font-size:15.5px;color:var(--ink-soft)}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:760px;margin:36px auto 0}
+  .faq details{
+    background:var(--cream-2);border:1px solid var(--line);
+    border-radius:var(--radius-sm);margin-bottom:12px;overflow:hidden;
+    transition:border-color .2s ease;
+  }
+  .faq details[open]{border-color:rgba(182,130,42,.4)}
+  .faq summary{
+    list-style:none;cursor:pointer;
+    padding:19px 22px;font-weight:600;font-size:16.5px;color:var(--ink);
+    display:flex;justify-content:space-between;align-items:center;gap:14px;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .plus{flex:0 0 auto;width:22px;height:22px;color:var(--sage);transition:transform .25s ease}
+  .faq details[open] summary .plus{transform:rotate(45deg)}
+  .faq .answer{padding:0 22px 20px;color:var(--ink-soft);font-size:15.5px;line-height:1.6}
+
+  /* ---------- Fechamento final ---------- */
+  .final{
+    position:relative;overflow:hidden;text-align:center;
+    background:radial-gradient(120% 90% at 50% 120%, #FCF7EC 0%, var(--cream) 60%);
+  }
+  .final-sun{position:absolute;bottom:-260px;left:50%;transform:translateX(-50%);width:620px;max-width:140%;opacity:.5;z-index:0}
+  .final-inner{position:relative;z-index:1}
+  .final .bigquote{
+    font-family:'Playfair Display',serif;font-weight:600;
+    font-size:clamp(24px,6.4vw,40px);line-height:1.3;
+    max-width:18ch;margin:20px auto 0;
+  }
+  .final .bigquote .gold{color:var(--gold)}
+
+  /* ---------- Rodapé ---------- */
+  footer{background:var(--cream-2);border-top:1px solid var(--line);padding:40px 0;text-align:center}
+  footer .f-handle{font-weight:600;color:var(--sage);text-decoration:none}
+  footer p{font-size:13px;color:var(--ink-soft);max-width:52ch;margin:10px auto 0;line-height:1.55}
+
+  /* ---------- CTA sticky mobile ---------- */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:rgba(246,239,226,.92);
+    backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    box-shadow:0 -8px 24px -16px rgba(43,38,30,.4);
+  }
+  .sticky-cta .btn{width:100%;padding:15px 24px;font-size:16.5px}
+  .sticky-cta .sticky-micro{display:block;text-align:center;font-size:11.5px;color:var(--ink-soft);margin-top:7px}
+  @media(min-width:760px){ .sticky-cta{display:none} }
+
+  .divider-sun{display:flex;justify-content:center;margin:6px auto 0;opacity:.7}
+
+  .lead{font-size:clamp(17px,4.6vw,20px);color:var(--ink-soft);max-width:40ch;margin:16px auto 0}
+  h2.title{font-size:clamp(26px,6.2vw,38px);max-width:18ch;margin-inline:auto}
+</style>
+</head>
+<body>
+
+<!-- ============ 1. HERO ============ -->
+<header class="hero section">
+  <!-- sol nascente de fundo -->
+  <svg class="hero-sun" viewBox="0 0 600 300" fill="none" aria-hidden="true">
+    <g stroke="#B6822A" stroke-width="1" opacity="0.9">
+      <circle cx="300" cy="300" r="80"/>
+      <circle cx="300" cy="300" r="130"/>
+      <circle cx="300" cy="300" r="185"/>
+      <circle cx="300" cy="300" r="245"/>
+    </g>
+    <circle cx="300" cy="300" r="44" fill="#EBD08C" opacity="0.5"/>
+    <line x1="20" y1="300" x2="580" y2="300" stroke="#B6822A" stroke-width="1" opacity="0.6"/>
+  </svg>
+
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Devocional · 5 minutos por dia</span>
+    <h1>Você não se afastou de Deus de propósito. A vida só foi ficando no caminho.</h1>
+    <p class="sub">Um reencontro de 30 dias, sem peso e sem pressa. Cinco minutos por dia para voltar a sentir a presença de Deus — <span class="gold">começando hoje.</span></p>
+
+    <!-- Mockup da capa (placeholder editável) -->
+    <div class="cover" role="img" aria-label="Capa do ebook 30 Dias para se Reconectar com Deus">
+      <div class="c-eyebrow">Devocional</div>
+      <div class="c-num">30</div>
+      <div class="c-title">DIAS</div>
+      <div class="c-sub">para se reconectar<br>com Deus</div>
+      <div class="c-foot">5 min por dia</div>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn btn--lg" href="[LINK_CHECKOUT_KIWIFY]">Quero começar meu reencontro <span class="arrow">→</span></a>
+      <p class="micro"><b>Acesso imediato</b> · PDF para ler no celular ou imprimir · Garantia de 7 dias</p>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 2. ESPELHO DA DOR ============ -->
+<section class="mirror section">
+  <div class="wrap center">
+    <span class="eyebrow">Talvez você se reconheça aqui</span>
+    <h2 class="title" style="margin-top:16px">Algumas dessas frases podem ser sobre você</h2>
+
+    <div class="pain-grid" style="text-align:left">
+      <div class="pain">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        <p>Você sente uma <b>saudade de Deus</b>, mas não sabe como voltar.</p>
+      </div>
+      <div class="pain">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <p>A oração foi ficando para depois — e <b>o depois virou meses.</b></p>
+      </div>
+      <div class="pain">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg>
+        <p>Tem até uma <b>vergonha</b> de se aproximar, como se fosse tarde demais.</p>
+      </div>
+      <div class="pain">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h7v18H6a2 2 0 0 1-2-2z"/><path d="M13 3h5a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5"/></svg>
+        <p>Já tentou ler a Bíblia, mas <b>achou difícil saber por onde começar.</b></p>
+      </div>
+      <div class="pain">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5L19 19M19 5l-2.5 2.5M7.5 16.5L5 19"/><circle cx="12" cy="12" r="3.5"/></svg>
+        <p>Acha que precisa de <b>tempo e disciplina</b> que você não tem agora.</p>
+      </div>
+      <div class="pain">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-9 9z"/><path d="M8.5 14.5s1.5 2 3.5 2 3.5-2 3.5-2M9 9.5h.01M15 9.5h.01"/></svg>
+        <p>Está passando por uma <b>fase difícil</b> e sente falta de uma paz que sumiu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. A VIRADA / QUEBRA DE OBJEÇÃO ============ -->
+<section class="turn section">
+  <div class="wrap">
+    <div class="divider-sun">
+      <svg width="70" height="40" viewBox="0 0 70 40" fill="none" aria-hidden="true">
+        <g stroke="#B6822A" stroke-width="1.2"><path d="M5 38h60"/><path d="M35 38a16 16 0 0 1 0-30"/><path d="M35 38a16 16 0 0 0 0-30" opacity="0"/><circle cx="35" cy="38" r="22" opacity="0.5"/></g>
+      </svg>
+    </div>
+    <p class="quotebox">Respira. Não é assim. Deus não está te esperando de braços cruzados — e sim de <b>braços abertos</b>, como o pai que corre ao encontro do filho que volta. Você não precisa chegar perfeito, nem ter todas as palavras, nem horas livres. Você só precisa de <b>cinco minutos</b> e de coração aberto. O resto, a gente faz junto — <b>um dia de cada vez.</b></p>
+  </div>
+</section>
+
+<!-- ============ 4. SOLUÇÃO ============ -->
+<section class="solucao section mirror">
+  <div class="wrap center">
+    <span class="eyebrow">O que é</span>
+    <h2 class="title" style="margin-top:16px">Um devocional feito para quem está voltando</h2>
+    <p class="lead">“30 Dias para se Reconectar com Deus” é um caminho simples e curto, sem julgamento, pensado para quem se afastou e quer reencontrar a fé com leveza — no seu tempo, do seu jeito.</p>
+    <div><span class="highlight">Leitura de 5 minutos por dia · Sem teologia complicada · Sem culpa</span></div>
+  </div>
+</section>
+
+<!-- ============ 5. COMO FUNCIONA (4 cards) ============ -->
+<section class="section">
+  <div class="wrap center">
+    <span class="eyebrow">Como funciona</span>
+    <h2 class="title" style="margin-top:16px">Cada dia tem 4 partes simples</h2>
+    <p class="lead">Um ritmo leve que cabe na sua manhã, no intervalo do almoço ou antes de dormir.</p>
+
+    <div class="steps" style="text-align:left">
+      <div class="step">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14l-8-3-8 3z"/></svg>
+        <div class="n">01</div>
+        <h3>Versículo</h3>
+        <p>Uma palavra de Deus para ouvir antes de tudo.</p>
+      </div>
+      <div class="step">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        <div class="n">02</div>
+        <h3>Reflexão</h3>
+        <p>Uma conversa curta, com um exemplo do dia a dia.</p>
+      </div>
+      <div class="step">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div class="n">03</div>
+        <h3>No seu dia de hoje</h3>
+        <p>Como aplicar aquilo nas próximas horas.</p>
+      </div>
+      <div class="step">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        <div class="n">04</div>
+        <h3>A ação de hoje</h3>
+        <p>Um gesto pequeno, às vezes mínimo, para tirar a fé do papel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. JORNADA (4 semanas) ============ -->
+<section class="journey section">
+  <div class="wrap center">
+    <span class="eyebrow">A jornada</span>
+    <h2 class="title" style="margin-top:16px">O que você vai viver em 30 dias</h2>
+    <p class="lead">Uma subida suave — o sol nascendo um pouco mais a cada semana.</p>
+
+    <div class="ladder" style="text-align:left">
+      <div class="week">
+        <div class="badge">1</div>
+        <div>
+          <div class="wlabel">Semana 1</div>
+          <h3>O caminho de volta</h3>
+          <p>Vencer a vergonha e dar o primeiro passo.</p>
+        </div>
+      </div>
+      <div class="week">
+        <div class="badge">2</div>
+        <div>
+          <div class="wlabel">Semana 2</div>
+          <h3>Aprendendo a conversar de novo</h3>
+          <p>Oração simples, silêncio e gratidão.</p>
+        </div>
+      </div>
+      <div class="week">
+        <div class="badge">3</div>
+        <div>
+          <div class="wlabel">Semana 3</div>
+          <h3>Confiança e entrega</h3>
+          <p>Ansiedade, perdão e paz.</p>
+        </div>
+      </div>
+      <div class="week">
+        <div class="badge">4</div>
+        <div>
+          <div class="wlabel">Semana 4</div>
+          <h3>Caminhando com Deus no dia a dia</h3>
+          <p>Amor, coragem, propósito e alegria.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:36px">
+      <a class="btn" href="[LINK_CHECKOUT_KIWIFY]">Quero viver esses 30 dias <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. ANTES / DEPOIS ============ -->
+<section class="section">
+  <div class="wrap center">
+    <span class="eyebrow">A transformação</span>
+    <h2 class="title" style="margin-top:16px">De onde você sai · para onde você chega</h2>
+
+    <div class="ba-grid">
+      <div class="ba before">
+        <div class="tag">Antes</div>
+        <h3>Hoje você sente…</h3>
+        <ul>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>Um vazio que você não consegue nomear</li>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>Culpa por ter ficado tanto tempo longe</li>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>A correria engolindo todos os seus dias</li>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>Distância de uma fé que já te acalmou</li>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>Ansiedade tomando conta por dentro</li>
+        </ul>
+      </div>
+      <div class="ba after">
+        <div class="tag">Depois</div>
+        <h3>Em 30 dias você vive…</h3>
+        <ul>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="#B6822A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A <b>presença</b> de Deus de novo perto de você</span></li>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="#B6822A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Leveza</b> no lugar do peso da culpa</span></li>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="#B6822A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Um <b>hábito simples</b> de 5 minutos por dia</span></li>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="#B6822A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Mais <b>paz</b> diante das mesmas situações</span></li>
+          <li><svg class="dot" viewBox="0 0 24 24" fill="none" stroke="#B6822A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>O <b>reencontro</b> que você tanto sentia falta</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. PARA QUEM É ============ -->
+<section class="section mirror">
+  <div class="wrap center">
+    <span class="eyebrow">Sinceridade</span>
+    <h2 class="title" style="margin-top:16px">Para quem é (e para quem não é)</h2>
+
+    <div class="fits-grid" style="text-align:left">
+      <div class="fits yes">
+        <h3>É para você se…</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quer voltar a se sentir perto de Deus</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Tem pouco tempo no dia</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Está passando por uma fase difícil</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Quer algo simples e acolhedor</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sente vergonha de recomeçar</li>
+        </ul>
+      </div>
+      <div class="fits no">
+        <h3>Não é para você se…</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Procura um estudo teológico denso e acadêmico</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Não quer dedicar nem 5 minutos por dia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFERTA + ANCORAGEM ============ -->
+<section class="offer section" id="oferta">
+  <div class="wrap center">
+    <span class="eyebrow">A oferta</span>
+    <h2 class="title" style="margin-top:16px">Comece seu reencontro hoje</h2>
+
+    <div class="offer-card">
+      <span class="ribbon">Oferta de lançamento</span>
+      <ul class="includes">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>30 dias de devocional guiado, um dia de cada vez</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Acesso vitalício — leia quantas vezes quiser</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>PDF para ler no celular ou imprimir</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Acesso imediato após a compra</li>
+      </ul>
+
+      <div class="price-old">de <s>R$ 39,90</s></div>
+      <div class="price-now"><small>R$</small> 7,90</div>
+      <div class="coffee">Menos que um café por todo o mês de reencontro.</div>
+
+      <a class="btn btn--lg btn--block" href="[LINK_CHECKOUT_KIWIFY]">Quero meu devocional agora <span class="arrow">→</span></a>
+
+      <div class="seals">
+        <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg>Acesso imediato</span>
+        <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Pagamento seguro</span>
+        <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>Compatível com qualquer celular</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. GARANTIA ============ -->
+<section class="section mirror">
+  <div class="wrap">
+    <div class="guarantee-card">
+      <div class="guarantee-seal">
+        <span class="num">7</span>
+        <span class="lab">dias</span>
+      </div>
+      <div>
+        <h3>Garantia incondicional de 7 dias</h3>
+        <p>Comece a ler. Se em 7 dias você sentir que não era para você, devolvemos 100% do valor. <b style="color:var(--ink)">O risco é todo nosso — o reencontro é todo seu.</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. FAQ ============ -->
+<section class="section">
+  <div class="wrap center">
+    <span class="eyebrow">Dúvidas</span>
+    <h2 class="title" style="margin-top:16px">Perguntas frequentes</h2>
+
+    <div class="faq" style="text-align:left">
+      <details>
+        <summary>Como recebo o ebook?
+          <svg class="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">Na hora. Assim que o pagamento é confirmado, você recebe o PDF por e-mail e também acessa pela área de membros.</div>
+      </details>
+      <details>
+        <summary>Preciso ser religioso ou ir à igreja?
+          <svg class="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">Não. É para qualquer pessoa que queira se reaproximar de Deus — sem cobrança e sem religiosidade pesada.</div>
+      </details>
+      <details>
+        <summary>Quanto tempo leva por dia?
+          <svg class="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">Cerca de 5 minutos. Cada dia é curto, simples e cabe na sua rotina.</div>
+      </details>
+      <details>
+        <summary>Funciona se eu já tentei e desisti antes?
+          <svg class="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">Foi feito exatamente para isso: simples e um dia de cada vez. Sem metas impossíveis, sem culpa por falhar.</div>
+      </details>
+      <details>
+        <summary>Consigo ler no celular?
+          <svg class="plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </summary>
+        <div class="answer">Sim, em qualquer aparelho — celular, tablet ou computador. E também dá para imprimir, se preferir ler no papel.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. FECHAMENTO + CTA FINAL ============ -->
+<section class="final section">
+  <svg class="final-sun" viewBox="0 0 600 300" fill="none" aria-hidden="true">
+    <g stroke="#B6822A" stroke-width="1" opacity="0.9">
+      <circle cx="300" cy="0" r="80"/>
+      <circle cx="300" cy="0" r="140"/>
+      <circle cx="300" cy="0" r="205"/>
+      <circle cx="300" cy="0" r="270"/>
+    </g>
+    <circle cx="300" cy="0" r="46" fill="#EBD08C" opacity="0.5"/>
+  </svg>
+  <div class="wrap final-inner">
+    <span class="eyebrow">Hoje pode ser o dia</span>
+    <p class="bigquote">A presença de Deus não é um destino distante. É uma <span class="gold">porta</span> que esteve do seu lado o tempo todo. Hoje você pode abri-la.</p>
+    <div style="margin-top:34px">
+      <a class="btn btn--lg" href="[LINK_CHECKOUT_KIWIFY]">Começar agora <span class="arrow">→</span></a>
+      <p class="micro">Acesso imediato · Garantia de 7 dias · Menos que um café</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RODAPÉ ============ -->
+<footer>
+  <div class="wrap">
+    <a class="f-handle" href="https://instagram.com/luzdecadaverso" target="_blank" rel="noopener">@luzdecadaverso</a>
+    <p>Conteúdo de cunho devocional e inspiracional, voltado ao bem-estar espiritual e à reconexão pessoal com a fé. Não substitui acompanhamento religioso, psicológico ou médico.</p>
+    <p style="margin-top:8px">© <span id="ano"></span> · Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ============ CTA STICKY (mobile) ============ -->
+<div class="sticky-cta">
+  <a class="btn" href="[LINK_CHECKOUT_KIWIFY]">Quero começar meu reencontro →</a>
+  <span class="sticky-micro">Acesso imediato · Garantia de 7 dias</span>
+</div>
+
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
